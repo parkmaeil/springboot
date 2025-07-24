@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +17,10 @@
    <script>
        function goWriter(){
           //alert("버튼이 클릭됨"); // ajax()->JSON
-          location.href="/sb/boardForm.do";
+          location.href="${ctx}/boardForm";
        }
        function goDel(num){
-          location.href="/sb/boardDelete.do?num="+num;
+          location.href="${ctx}/boardDelete?num="+num;
        }
     </script>
 </head>

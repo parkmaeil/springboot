@@ -23,4 +23,9 @@ public class BoardController { // new BoardController()
         model.addAttribute("bList", bList);
         return "boardList"; // /WEB-INF/views/boardList.jsp
     }
+    @RequestMapping("/boardForm")
+    public String boardForm(){
+        return "boardForm";
+    }
+
 }
