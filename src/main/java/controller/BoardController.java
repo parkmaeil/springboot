@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import repository.BoardMapper;
 
 import java.util.List;
@@ -27,5 +28,15 @@ public class BoardController { // new BoardController()
     public String boardForm(){
         return "boardForm";
     }
-
+    @RequestMapping("/boardWrite")
+    public String boardWrite(Board board){ // new Board()
+        boardMapper.save(board);
+          // 다시 리스트페이지
+        return "redirect:/boardList";
+    }
+    @RequestMapping("/boardDelete")
+    public String boardDelete(@RequestParam("num") int num){ // ?num=3
+        boardMapper.deleteById(num);
+        return "redirect:/boardList";
+    }
 }

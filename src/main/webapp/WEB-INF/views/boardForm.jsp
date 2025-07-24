@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +22,7 @@
   <div class="card">
     <div class="card-header">글쓰기</div>
     <div class="card-body">
-       <form method="post" action="/sb/boardWrite.do">
+       <form method="post" action="${ctx}/boardWrite">
          <div class="form-group">
            <label for="title">제목(title)</label>
            <input type="text" class="form-control" placeholder="Enter title" id="title" name="title">
