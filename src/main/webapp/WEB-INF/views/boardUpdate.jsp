@@ -15,7 +15,9 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-
+    function goList(){
+       location.href="${ctx}/boardList";
+    }
   </script>
 </head>
 <body>
@@ -51,7 +53,7 @@
       </table>
         <button type="submit" class="btn btn-primary btn-sm">수정</button>
         <button type="reset" class="btn btn-warning btn-sm">취소</button>
-        <button type="button" class="btn btn-success btn-sm">목록</button>
+        <button type="button" class="btn btn-success btn-sm" onClick="goList()">목록</button>
       </form>
     </div>
     <div class="card-footer">학번_이름</div>
