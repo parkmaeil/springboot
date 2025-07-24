@@ -22,18 +22,7 @@
   <div class="card">
     <div class="card-header">글쓰기</div>
     <div class="card-body">
-       <form method="post" action="${ctx}/boardWrite">
-         <div class="form-group">
-           <label for="title">제목(title)</label>
-           <input type="text" class="form-control" placeholder="Enter title" id="title" name="title">
-         </div>
-         <div class="form-group">
-           <label for="writer">작성자(writer)</label>
-           <input type="text" class="form-control" placeholder="Enter writer" id="writer" name="writer">
-         </div>
-         <button type="submit" class="btn btn-primary">글쓰기</button>
-         <button type="reset" class="btn btn-warning">취소</button>
-       </form>
+      게시판 상세보기~~~
     </div>
     <div class="card-footer">학번_이름</div>
   </div>

@@ -26,7 +26,7 @@
 </head>
 <body>
 <div class="container mt-5">
-  <h2>MVC Framework 게시판</h2>
+  <h2>Spring MVC Framework 게시판</h2>
   <div class="card">
     <div class="card-header">리스트보기</div>
     <div class="card-body">
@@ -45,7 +45,7 @@
             <c:forEach var="board" items="${bList}">
               <tr>
                   <td>${board.num}</td>
-                  <td>${board.title}</td>
+                  <td><a href="${ctx}/boardDetail/${board.num}">${board.title}</a></td>
                   <td>${board.writer}</td>
                   <td><fmt:formatDate value="${board.date}" pattern="yyyy-MM-dd" /></td>
                   <td>${board.count}</td>

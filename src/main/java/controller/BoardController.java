@@ -4,6 +4,7 @@ import entity.Board;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import repository.BoardMapper;
@@ -38,5 +39,12 @@ public class BoardController { // new BoardController()
     public String boardDelete(@RequestParam("num") int num){ // ?num=3
         boardMapper.deleteById(num);
         return "redirect:/boardList";
+    }
+    @RequestMapping("/boardDetail/{num}")
+    public String boardDetail(@PathVariable int num, Model model){
+        Board board=boardMapper.findById(num);
+        // 객체바인딩
+        model.addAttribute("board", board);
+        return "boardDetail";  // ${board.num} ~~~~
     }
 }
