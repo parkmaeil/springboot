@@ -52,4 +52,10 @@ public class BoardController { // new BoardController()
         boardMapper.deleteById(num);
         return "redirect:/boardList";
     }
+    @RequestMapping("/boardUpdateForm/{num}")
+    public String boardUpdateForm(@PathVariable int num, Model model){
+        Board board=boardMapper.findById(num);
+        model.addAttribute("board", board);
+        return "boardUpdate"; // boardUpdate.jsp
+    }
 }
