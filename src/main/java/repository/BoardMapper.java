@@ -11,6 +11,7 @@ public interface BoardMapper { // new BoardMapper()
     public void save(Board board);
     public void deleteById(int num);
     public Board findById(int num);
+    public void updateById(Board board);
 }
 /*
    public class SqlSessionFactoryBean implements BoardMapper{

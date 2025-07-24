@@ -16,4 +16,9 @@
     <select id="findById" resultType="entity.Board">
        select * from board where num=#{num}
     </select>
+    <update id="updateById" parameterType="entity.Board">
+        update board
+        set title=#{title}, writer=#{writer}
+        where num=#{num}
+    </update>
 </mapper>

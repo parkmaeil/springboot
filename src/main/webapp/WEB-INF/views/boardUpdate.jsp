@@ -25,6 +25,8 @@
   <div class="card">
     <div class="card-header">수정하기</div>
     <div class="card-body">
+    <form action="${ctx}/boardUpdate" method="post">
+      <input type="hidden" name="num" value="${board.num}"/>
       <table class="table table-bordered">
          <tr>
             <td>번호</td>
@@ -47,9 +49,10 @@
               <td>${board.count}</td>
           </tr>
       </table>
-      <button class="btn btn-primary btn-sm">수정</button>
-      <button class="btn btn-warning btn-sm">취소</button>
-      <button class="btn btn-success btn-sm">목록</button>
+        <button type="submit" class="btn btn-primary btn-sm">수정</button>
+        <button type="reset" class="btn btn-warning btn-sm">취소</button>
+        <button type="button" class="btn btn-success btn-sm">목록</button>
+      </form>
     </div>
     <div class="card-footer">학번_이름</div>
   </div>

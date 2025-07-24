@@ -58,4 +58,9 @@ public class BoardController { // new BoardController()
         model.addAttribute("board", board);
         return "boardUpdate"; // boardUpdate.jsp
     }
+    @RequestMapping("/boardUpdate")
+    public String boardUpdate(Board board){ //num, title, writer
+        boardMapper.updateById(board);
+        return "redirect:/boardList";
+    }
 }
