@@ -29,7 +29,7 @@
     </div>
     <div class="card-body">
       <p class="card-text">아래 버튼을 클릭해 게시판으로 이동해보세요.</p>
-      <a href="${ctx}/board/list" class="btn btn-primary">📋 게시판 이동</a>
+      <a href="${ctx}/boardList" class="btn btn-primary">📋 게시판 이동</a>
     </div>
     <div class="card-footer text-muted">
       <fmt:formatDate value="<%= new java.util.Date() %>" pattern="yyyy-MM-dd HH:mm:ss" />
