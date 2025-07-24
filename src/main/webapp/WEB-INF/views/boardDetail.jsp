@@ -22,7 +22,31 @@
   <div class="card">
     <div class="card-header">글쓰기</div>
     <div class="card-body">
-      게시판 상세보기~~~
+      <table class="table table-bordered">
+         <tr>
+            <td>번호</td>
+            <td>${board.num}</td>
+         </tr>
+         <tr>
+            <td>제목</td>
+            <td>${board.title}</td>
+         </tr>
+         <tr>
+            <td>작성자</td>
+            <td>${board.writer}</td>
+         </tr>
+         <tr>
+             <td>작성일</td>
+             <td>${board.date}</td>
+          </tr>
+          <tr>
+              <td>조회수</td>
+              <td>${board.num}</td>
+          </tr>
+      </table>
+      <button class="btn btn-primary btn-sm">목록</button>
+      <button class="btn btn-info btn-sm">수정</button>
+      <button class="btn btn-warning btn-sm">삭제</button>
     </div>
     <div class="card-footer">학번_이름</div>
   </div>
