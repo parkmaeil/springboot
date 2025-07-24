@@ -14,6 +14,17 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+     function goList(){
+       location.href="${ctx}/boardList";
+     }
+     function goDel(num){
+       location.href="${ctx}/boardDelete/"+num;
+     }
+     function goUpdate(num){
+
+     }
+  </script>
 </head>
 <body>
 
@@ -41,16 +52,15 @@
           </tr>
           <tr>
               <td>조회수</td>
-              <td>${board.num}</td>
+              <td>${board.count}</td>
           </tr>
       </table>
-      <button class="btn btn-primary btn-sm">목록</button>
-      <button class="btn btn-info btn-sm">수정</button>
-      <button class="btn btn-warning btn-sm">삭제</button>
+      <button class="btn btn-primary btn-sm" onClick="goList()">목록</button>
+      <button class="btn btn-info btn-sm" onClick="goUpdate(${board.num})">수정</button>
+      <button class="btn btn-warning btn-sm" onClick="goDel(${board.num})">삭제</button>
     </div>
     <div class="card-footer">학번_이름</div>
   </div>
 </div>
-
 </body>
 </html>

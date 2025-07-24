@@ -47,4 +47,9 @@ public class BoardController { // new BoardController()
         model.addAttribute("board", board);
         return "boardDetail";  // ${board.num} ~~~~
     }
+    @RequestMapping("/boardDelete/{num}")
+    public String boardDeleteById(@PathVariable int num){
+        boardMapper.deleteById(num);
+        return "redirect:/boardList";
+    }
 }
